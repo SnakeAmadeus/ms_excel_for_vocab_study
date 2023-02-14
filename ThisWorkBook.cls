@@ -15,7 +15,7 @@ Public Sub registerKeyStrokes()
     'Columns that will be hidden when macro is activated:
     colsToHide = Array(3, 4)
     
-    Application.OnKey "{F12}", "enableMacro"
+    Application.OnKey "+{F1}", "enableMacro"
     
     If Selection.Column = 1 Then
         Application.OnKey " ", "markCell"
@@ -50,7 +50,7 @@ Private Sub Workbook_Activate()
     
     Call registerKeyStrokes
     
-    enableMacro = False
+    macroEnabled = False
     
 End Sub
 
