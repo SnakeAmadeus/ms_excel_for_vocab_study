@@ -52,6 +52,13 @@ Private Sub Workbook_Activate()
     
     macroEnabled = False
     
+    Dim title, prompt1, prompt2, prompt3 As String
+    title = "MicroSoft Excel for Vocabulary Study Plugin" & vbCrLf & "by Snake" & vbCrLf
+    prompt1 = "1. Press " & Chr(34) & "Shift+F1" & Chr(34) & " to turn the macro ON/OFF"
+    prompt2 = "2. Press SpaceBar on 1st column to mark specific vocab as incomplete. "
+    prompt3 = "3. Macro will automatically reveal the current row's vocab key."
+    MsgBox title & vbCrLf & "Usage: " & vbCrLf & vbCrLf & prompt1 & vbCrLf & vbCrLf & prompt2 & vbCrLf & vbCrLf & prompt3
+    
 End Sub
 
 Private Sub Workbook_SheetActivate(ByVal Sh As Object)
